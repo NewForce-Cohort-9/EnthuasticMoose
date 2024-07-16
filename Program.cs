@@ -3,7 +3,10 @@
 Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
 Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
-MooseSays();
+// Let the moose speak!
+MooseSays("H I, I'M  E N T H U S I A S T I C !");
+MooseSays("I really am enthusiastic");
+
 
 //Function - JavaScript
 // function MooseSays() {
@@ -15,10 +18,11 @@ MooseSays();
 //     return console.log()
 // }
 
+//String interloption - ${message}
 // void is a function without returning anything - an action like a verb
-void MooseSays()
+void MooseSays(string message)
 {
-    Console.WriteLine(@"
+    Console.WriteLine($@"
                                        _.--^^^--,
                                     .'          `\
   .-^^^^^^-.                      .'              |
@@ -35,7 +39,7 @@ void MooseSays()
                '-'    | /       \ |
                       |  .-. .-.  |
                       \ / o| |o \ /
-                       |   / \   |    H I, I'M  E N T H U S I A S T I C !
+                       |   / \   |    {message}
                       / `^`   `^` \
                      /             \
                     | '._.'         \
