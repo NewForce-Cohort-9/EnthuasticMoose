@@ -7,6 +7,9 @@ Console.WriteLine();
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("I really am enthusiastic");
 
+// As a question
+bool isTrue = MooseAsks("Is Canada real?");
+Console.WriteLine(isTrue);
 
 //Function - JavaScript
 // function MooseSays() {
@@ -50,4 +53,25 @@ void MooseSays(string message)
                       \ \'._  ` '_.'
                        `^^` `^^^`
     ");
+}
+
+bool MooseAsks(string question)
+{
+    Console.Write($"{question} (Y/N): ");
+    string answer = Console.ReadLine().ToLower();
+
+    while (answer != "y" && answer != "n")
+    {
+        Console.Write($"{question} (Y/N): ");
+        answer = Console.ReadLine().ToLower();
+    }
+
+    if (answer == "y")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
